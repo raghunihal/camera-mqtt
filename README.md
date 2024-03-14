@@ -1,5 +1,4 @@
-
-# 
+# Camera_Publish_Mqtt.cpp
 This C++ code is using the OpenCV library and the MQTT library to capture video frames from a camera and publish them to an MQTT topic. 
 The code starts by including the necessary libraries and defining some functions for handling MQTT connection events. 
 The `on_connect` function is called when the client successfully connects to the MQTT broker, and it prints the result code of the connection. 
