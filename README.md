@@ -33,4 +33,5 @@ The image is then displayed using the `imshow` function. The function also waits
 If the escape key is pressed, all windows are closed. The `main` function is the entry point of the program. 
 It creates an MQTT client object and sets the `on_message` callback function. The client is then connected to the MQTT broker using the `connect` function. 
 After successful connection, the client subscribes to the "topic/test" topic and enters a loop to continuously receive and handle messages using the `loop_forever` function. 
-If any exceptions occur during the execution of the code, an error message is printed and the program returns 1. Otherwise, it returns 0 to indicate successful execution.
+If any exceptions occur during the execution of the code, an error message is printed and the program returns 
+1. Otherwise, it returns 0 to indicate successful execution.
