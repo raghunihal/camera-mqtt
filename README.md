@@ -18,6 +18,9 @@ The JPEG image is then converted to a string and published to the MQTT topic "to
 If any exceptions occur during the execution of the code, an error message is printed and the program returns with an exit code of 
 1. Finally, the `main` function returns 0 to indicate successful execution of the program.
 
+# Command for Compiling the Program
+g++ Camera_Publish_Mqtt.cpp `pkg-config --cflags --libs opencv4` -lpaho-mqttpp3 -lpaho-mqtt3as - o Camera_Publish_Mqtt
+
 
 
 # Camera_Subscriber_Mqtt.cpp
@@ -36,3 +39,6 @@ It creates an MQTT client object and sets the `on_message` callback function. Th
 After successful connection, the client subscribes to the "topic/test" topic and enters a loop to continuously receive and handle messages using the `loop_forever` function. 
 If any exceptions occur during the execution of the code, an error message is printed and the program returns 
 1. Otherwise, it returns 0 to indicate successful execution.
+
+# Command for Compiling the Program
+g++ Camera_Subscriber_Mqtt.cpp `pkg-config --cflags --libs opencv4` -lpaho-mqttpp3 -lpaho-mqtt3as - o Camera_Subscriber_Mqtt
