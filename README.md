@@ -19,6 +19,7 @@ If any exceptions occur during the execution of the code, an error message is pr
 1. Finally, the `main` function returns 0 to indicate successful execution of the program.
 
 
+
 # Camera_Subscriber_Mqtt.cpp
 This C++ code is using the OpenCV library and the MQTT library to receive and display images from a specified topic. 
 The code starts by including the necessary libraries: `opencv2/opencv.hpp`, `iostream`, `vector`, and `mqtt/client.h`. 
