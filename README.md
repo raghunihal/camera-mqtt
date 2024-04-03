@@ -27,7 +27,7 @@ g++ Camera_Publish_Mqtt.cpp `pkg-config --cflags --libs opencv4` -lpaho-mqttpp3 
 
 This C++ code is an implementation of an MQTT (Message Queuing Telemetry Transport) subscriber that receives video frames from an MQTT broker and displays them using the OpenCV library. Here's a breakdown of the code: 
 1. The code includes the necessary header files: `<iostream>` for input/output operations, `<opencv2/opencv.hpp>` for OpenCV functions, and `<mqtt/async_client.h>` for the MQTT client.
-2. 2. The `MqttSubscriber` class is defined, which has the following members: - `serverURI`: the URI of the MQTT broker. - `clientId`: the unique identifier for the MQTT client. - `topic`: the topic to which the client will subscribe. - `client`: a shared pointer to an `mqtt::async_client` object, which is the MQTT client.
+2. The `MqttSubscriber` class is defined, which has the following members: - `serverURI`: the URI of the MQTT broker. - `clientId`: the unique identifier for the MQTT client. - `topic`: the topic to which the client will subscribe. - `client`: a shared pointer to an `mqtt::async_client` object, which is the MQTT client.
 3. The `connect()` method of the `MqttSubscriber` class establishes a connection to the MQTT broker, sets the connection options, and subscribes to the specified topic.
 4. The `disconnect()` method unsubscribes from the topic and disconnects from the MQTT broker.
 5. The `message_arrived()` method is an override of the `mqtt::callback` interface. This method is called whenever a message is received on the subscribed topic. It decodes the received message (which is assumed to be a video frame) using OpenCV's `imdecode()` function and displays the frame in a window using `cv::imshow()` and `cv::waitKey()`.
